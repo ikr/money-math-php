@@ -246,6 +246,12 @@ class Decimal2Test extends \PHPUnit_Framework_TestCase {
         $this->assertEquals('-6.50', strval(Decimal2::getPercentsOf($d, $p)));
     }
 
+    public function testCalculatesPercents6() {
+        $d = new Decimal2('0.50');
+        $p = new Decimal2('33.00');
+        $this->assertEquals('0.17', strval(Decimal2::getPercentsOf($d, $p)));
+    }
+
 //--------------------------------------------------------------------------------------------------
 
     public function testMultipliesTwoDecimals1() {
