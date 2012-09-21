@@ -1,6 +1,7 @@
 {
     "name": "ikr/money-math",
     "version": "0.1.0",
+    "type": "library",
     "description": "gmp-based arbitrary precision operations on currency amounts \"XXX.YY\"; because floats are BAD for representing money",
 
     "keywords": [
@@ -27,7 +28,7 @@
 
     "autoload": {
         "psr-0": {
-            "MoneyMath": "src/"
+            "MoneyMath": "src"
         }
     },
 
