@@ -35,7 +35,8 @@
     "minimum-stability": "dev",
 
     "require": {
-        "php": ">=5.3.3"
+        "php": ">=5.3.3",
+        "ext-gmp": "*"
     },
 
     "require-dev": {
