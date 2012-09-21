@@ -1,0 +1,1 @@
+[![Build Status](https://secure.travis-ci.org/ikr/money-math-php.png)](http://travis-ci.org/ikr/money-math-php)

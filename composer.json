@@ -1,0 +1,44 @@
+{
+    "name": "ikr/money-math",
+    "version": "0.1.0",
+    "description": "gmp-based arbitrary precision operations on currency amounts \"XXX.YY\"; because floats are BAD for representing money",
+
+    "keywords": [
+        "money",
+        "gmp",
+        "currency",
+        "bigint",
+        "bignum",
+        "arithmetic",
+        "arbitrary",
+        "precision",
+        "format"
+    ],
+
+    "homepage": "https://github.com/ikr/money-math-php",
+    "licence": "MIT",
+
+    "authors": [
+        {
+            "name": "Ivan Krechetov",
+            "email": "ivan.krechetov@gmail.com"
+        }
+    ],
+
+    "autoload": {
+        "psr-0": {
+            "MoneyMath": "src/"
+        }
+    },
+
+    "minimum-stability": "dev",
+
+    "require": {
+        "php": ">=5.3.3",
+        "ext-gmp": "*"
+    },
+
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
+    }
+}
