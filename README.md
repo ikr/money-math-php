@@ -1,3 +1,5 @@
+[![Build Status](https://secure.travis-ci.org/ikr/money-math-php.png)](http://travis-ci.org/ikr/money-math-php)
+
 # What does it do?
 
 Arithmetic operations on currency amounts. Amounts on input and output are arbitrary large and
