@@ -256,19 +256,27 @@ class Decimal2 {
         $sign_b = ('-' === $strB[0])? -1 : 1;
 
         $ret = new Decimal2('0');
-        $ret->cents = gmp_strval(
-            gmp_div_q(
-                gmp_add(
-                    gmp_mul(
-                        gmp_abs(gmp_init($a->cents, 10)),
-                        100
-                    ),
-                    50
-                ),
-                gmp_abs(gmp_init($b->cents, 10)),
-                GMP_ROUND_ZERO
-            )
+
+        $aAbsCentsMul100 = gmp_mul(
+            gmp_abs(gmp_init($a->cents, 10)),
+            100
         );
+
+        $bAbsCents = gmp_abs(gmp_init($b->cents, 10));
+
+        $retCents = gmp_div_q(
+            $aAbsCentsMul100,
+            $bAbsCents,
+            GMP_ROUND_ZERO
+        );
+
+        $retCentsMod = gmp_mod($aAbsCentsMul100, $bAbsCents);
+
+        if (gmp_cmp($retCentsMod, gmp_sub($bAbsCents, $retCentsMod)) >=0 ) {
+            $retCents = gmp_add($retCents, 1);
+        }
+
+        $ret->cents = gmp_strval($retCents);
 
         if (($sign_a * $sign_b) < 0) {
             $ret->cents = gmp_strval(
