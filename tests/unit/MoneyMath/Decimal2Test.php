@@ -306,6 +306,12 @@ class Decimal2Test extends \PHPUnit_Framework_TestCase {
         $this->assertEquals('0.00', strval(Decimal2::div($a, $b)));
     }
 
+    public function testDividesTwoDecimals8() {
+        $a = new Decimal2('2');
+        $b = new Decimal2('3');
+        $this->assertEquals('0.67', strval(Decimal2::div($a, $b)));
+    }
+
 //--------------------------------------------------------------------------------------------------
 
     public function testCalculatesDifference1() {
