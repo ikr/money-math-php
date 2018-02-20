@@ -40,7 +40,7 @@ class Decimal2Test extends \PHPUnit_Framework_TestCase {
     }
 
     public function testParsesFraction4() {
-        $this->assertD(new Decimal2('.99'), 0, 99, '0.99');
+        $this->assertD(new Decimal2('0.99'), 0, 99, '0.99');
     }
 
     public function testParsesNegativeFraction1() {
