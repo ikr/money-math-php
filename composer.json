@@ -39,6 +39,7 @@
     },
 
     "require-dev": {
+        "ext-mbstring": "*",
         "phpunit/phpunit": "3.7.*"
     }
 }
