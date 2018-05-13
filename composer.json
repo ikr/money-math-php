@@ -26,8 +26,14 @@
     ],
 
     "autoload": {
-        "psr-0": {
-            "MoneyMath": "src/"
+        "psr-4": {
+            "MoneyMath\\": "src/MoneyMath"
+        }
+    },
+
+    "autoload-dev": {
+        "psr-4": {
+            "MoneyMath\\": "tests/unit/MoneyMath"
         }
     },
 
@@ -40,6 +46,6 @@
 
     "require-dev": {
         "ext-mbstring": "*",
-        "phpunit/phpunit": "3.7.*"
+        "phpunit/phpunit": "^4.8|^6.5|^7.0"
     }
 }

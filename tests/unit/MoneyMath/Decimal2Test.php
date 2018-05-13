@@ -2,7 +2,9 @@
 
 namespace MoneyMath;
 
-class Decimal2Test extends \PHPUnit_Framework_TestCase {
+use PHPUnit\Framework\TestCase;
+
+class Decimal2Test extends TestCase {
     public function testParsesInteger1() {
         $this->assertD(new Decimal2('3456'), 3456, 0, '3456.00');
     }
@@ -170,6 +172,11 @@ class Decimal2Test extends \PHPUnit_Framework_TestCase {
     public function testReturnsCents2() {
          $a = new Decimal2('1.99');
          $this->assertEquals(199, $a->centsValue());
+    }
+
+    public function testReturnsCents3() {
+         $a = new Decimal2('9223372036854775807.20');
+         $this->assertEquals(922337203685477580720, $a->centsValue());
     }
 
 //--------------------------------------------------------------------------------------------------
